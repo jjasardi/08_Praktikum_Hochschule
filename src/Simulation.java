@@ -10,13 +10,13 @@ public class Simulation
 
   private void simulieren()
   {
-    betreuungsverhaeltnis.studentZufuegen(new Student("Adam Alder", "abcd-efgh"));
-    betreuungsverhaeltnis.studentZufuegen(new Student("Bea Bingo", "ace-gikm"));
-    betreuungsverhaeltnis.studentZufuegen(new Student("Clea Clever", "bdfh-jlnp"));
-    betreuungsverhaeltnis.studentZufuegen(new Student("Dino Dasen", "qwer-tzui"));
-    betreuungsverhaeltnis.studentZufuegen(new Student("Eva Ente", "asdf-ghjk"));
-    betreuungsverhaeltnis.studentZufuegen(new Student("Fritz Floh", "yxcv-bnmm"));
-    betreuungsverhaeltnis.studentZufuegen(new Student("Geri Gugger", "uvwa-xyzb"));
+    betreuungsverhaeltnis.hinzufuegen(new Student("Adam Alder", "abcd-efgh"));
+    betreuungsverhaeltnis.hinzufuegen(new Student("Bea Bingo", "ace-gikm"));
+    betreuungsverhaeltnis.hinzufuegen(new Student("Clea Clever", "bdfh-jlnp"));
+    betreuungsverhaeltnis.hinzufuegen(new Student("Dino Dasen", "qwer-tzui"));
+    betreuungsverhaeltnis.hinzufuegen(new Student("Eva Ente", "asdf-ghjk"));
+    betreuungsverhaeltnis.hinzufuegen(new Student("Fritz Floh", "yxcv-bnmm"));
+    betreuungsverhaeltnis.hinzufuegen(new Student("Geri Gugger", "uvwa-xyzb"));
     betreuungsverhaeltnis.verteileCredits();
     betreuungsverhaeltnis.ausgeben();
   }

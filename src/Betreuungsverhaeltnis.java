@@ -1,14 +1,15 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
- * Diese Klasse verwaltet einen Dozenten und die von ihm betreuten Studenten.
+ * Diese Klasse verwaltet einen Dozenten und die von ihm betreuten Studierenden.
  * @author  Marc Rennhard
  */
 public class Betreuungsverhaeltnis
 {
   private Dozent dozent;
-  private ArrayList<Student> studenten;
+  private List<Student> studenten;
 
   /**
    * Erzeuge ein Betreuungsverhaeltnis.
@@ -24,14 +25,13 @@ public class Betreuungsverhaeltnis
    * Fuege einen Studenten hinzu.
    * @param student Der Student
    */
-  public void studentZufuegen(Student student)
+  public void hinzufuegen(Student student)
   {
     studenten.add(student);     
   }
 
   /**
-   * Verteilt ein gewisse Anzahl Credits zufällig unter den Studenten,
-   * total werden Anzahl Studenten * 40 Credits verteilt.
+   * Verteilt ein gewisse Anzahl Credits zufällig unter den Studierenden,
    */
   public void verteileCredits()
   {
@@ -47,11 +47,12 @@ public class Betreuungsverhaeltnis
    */
   public void ausgeben()
   {
-    System.out.println("Dozent " + dozent.gibInfo() + ", Buero " + dozent.gibBuero() + 
-        ", Telefon: " + dozent.gibTelefonnummer());
-    System.out.println("betreut " + studenten.size() + " Studenten:");
+    System.out.println("Dozent: " + dozent.gibInfo());
+    System.out.println("Büro: " + dozent.gibBuero());
+    System.out.println("Telefon: " + dozent.gibTelefonnummer());
+    System.out.println("Betreute Studierende: " + studenten.size());
     for (Student student : studenten) {
-      System.out.println(student.gibInfo() + ", " + student.gibCredits() + " credits");
+      System.out.println(" " + student.gibInfo() + ", " + student.gibCredits() + " credits");
     }
   }
 }
